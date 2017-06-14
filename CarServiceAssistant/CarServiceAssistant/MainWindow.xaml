@@ -3,10 +3,47 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:CarServiceAssistant"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid Background="#FFF0F0F0" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
+            <Label Background="Gray" Content="Menu" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Padding="1"></Label>
+            <Menu x:Name="menu" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,21.5,0,0">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem Header="View demands" HorizontalContentAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction 
+                                Command="{Binding NavigationMenuItemClicked}"
+                                CommandParameter="DemandViewerWindow"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </MenuItem>
+                <MenuItem Header="Manage demands" HorizontalContentAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction 
+                                Command="{Binding NavigationMenuItemClicked}"
+                                CommandParameter="DemandManagerWindow"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </MenuItem>
+                <MenuItem Header="Send new demand" HorizontalContentAlignment="Center">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction 
+                                Command="{Binding NavigationMenuItemClicked}"
+                                CommandParameter="DemandProviderWindow"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </MenuItem>
+            </Menu>
+        </Grid>
     </Grid>
 </Window>
