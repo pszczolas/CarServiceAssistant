@@ -1,0 +1,56 @@
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\CarServiceAssistant.exe.config
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\CarServiceAssistant.exe
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\CarServiceAssistant.pdb
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.dll
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.dll
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.EF6.dll
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.Linq.dll
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.xml
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.xml
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.csprojResolveAssemblyReference.cache
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\MainWindow.g.cs
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\App.g.cs
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant_Content.g.cs
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant_MarkupCompile.cache
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant_MarkupCompile.lref
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\MainWindow.baml
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.g.resources
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.Properties.Resources.resources
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.csproj.GenerateResource.Cache
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.exe
+c:\users\marci\onedrive\dokumenty\visual studio 2015\Projects\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.pdb
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\CarServiceAssistant.exe.config
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.exe
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.pdb
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\CarServiceAssistant.exe
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\CarServiceAssistant.pdb
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.xml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Data.SQLite.xml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.csprojResolveAssemblyReference.cache
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\MainWindow.g.cs
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\View\ServiceSelection.g.cs
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\App.g.cs
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant_Content.g.cs
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant_MarkupCompile.cache
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant_MarkupCompile.lref
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\MainWindow.baml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\View\ServiceSelection.baml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.g.resources
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.Properties.Resources.resources
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\CarServiceAssistant.csproj.GenerateResource.Cache
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\View\ServiceModification.g.cs
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\View\ServiceModification.baml
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\View\ServiceAdding.g.cs
+C:\Users\marci\Desktop\CarServiceAssistant\CarServiceAssistant\CarServiceAssistant\obj\Debug\View\ServiceAdding.baml
