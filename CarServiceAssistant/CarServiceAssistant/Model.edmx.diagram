@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81d24bd49dfb4b47ac9fd0ba7e7ad2de" Name="Diagram1">
+        <EntityTypeShape EntityType="CarServiceDBModel.Car" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceDBModel.Customer" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceDBModel.Part" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceDBModel.Service" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceDBModel.ServiceStatus" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="CarServiceDBModel.FK_Service_2_0" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceDBModel.FK_Service_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceDBModel.FK_Part_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceDBModel.FK_Service_0_0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

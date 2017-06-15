@@ -21,6 +21,7 @@ namespace CarServiceAssistant.View
     {
         public ServiceModification()
         {
+            DataContext = new ViewModel.ServiceModificationViewModel();
             InitializeComponent();
         }
     }

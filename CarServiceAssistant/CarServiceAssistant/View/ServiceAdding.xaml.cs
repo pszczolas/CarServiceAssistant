@@ -17,10 +17,11 @@ namespace CarServiceAssistant.View
     /// <summary>
     /// Interaction logic for AddNewService.xaml
     /// </summary>
-    public partial class AddNewService : Window
+    public partial class ServiceAdding : Window
     {
-        public AddNewService()
+        public ServiceAdding()
         {
+            DataContext = new ViewModel.ServiceAddingViewModel();
             InitializeComponent();
         }
     }

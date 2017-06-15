@@ -1,4 +1,4 @@
-﻿<Window x:Class="CarServiceAssistant.View.AddNewService"
+﻿<Window x:Class="CarServiceAssistant.View.ServiceAdding"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -73,8 +73,8 @@
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label x:Name="a" Content="Vin:"/>
-                <TextBox x:Name="findPhraseTextBox" Text="{Binding SearchedPhrase, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="22"  Grid.Column="1"/>
-                <Button x:Name="chooseServiceButton" Content="Work with this service" VerticalAlignment="Center" Height="22"  Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
+                <TextBox x:Name="searchedVinTextBox" Text="{Binding SearchedVin, Mode=TwoWay}" VerticalAlignment="Center" Height="22"  Grid.Column="1"/>
+                <Button x:Name="findByVinButton" Content="Find by VIN" VerticalAlignment="Center" Height="22"  Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
             </Grid>
         </GroupBox>
 
@@ -89,12 +89,12 @@
                     <RowDefinition Height="1*"></RowDefinition>
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label x:Name="Brand" Content="Brand:" Grid.Row="0" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="descriptionTextBox" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
-                <Label x:Name="Model" Content="Model:" Grid.Row="1" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="descriptionTextBox1" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
-                <Label x:Name="Vin" Content="Vin:" Grid.Row="2" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="descriptionTextBox2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
+                <Label x:Name="brand" Content="Brand:" Grid.Row="0" VerticalAlignment="Center" Height="30"></Label>
+                <TextBox x:Name="brandTextBox" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Brand, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label x:Name="model" Content="Model:" Grid.Row="1" VerticalAlignment="Center" Height="30"></Label>
+                <TextBox x:Name="modelTextBox" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Model, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label x:Name="vin" Content="Vin:" Grid.Row="2" VerticalAlignment="Center" Height="30"></Label>
+                <TextBox x:Name="vinTextBox" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Vin, UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
         </GroupBox>
 
@@ -109,8 +109,8 @@
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label x:Name="b" Content="Phone:"/>
-                <TextBox x:Name="findPhraseTextBox2" Text="{Binding SearchedPhrase, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="22"  Grid.Column="1"/>
-                <Button x:Name="chooseServiceButton2" Content="Work with this service" VerticalAlignment="Center" Height="22"  Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
+                <TextBox x:Name="searchedPhoneTextBox" Text="{Binding SearchedPhoneNumber, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="22"  Grid.Column="1"/>
+                <Button x:Name="findByPhoneButton" Content="Find by phone number" VerticalAlignment="Center" Height="22"  Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
             </Grid>
         </GroupBox>
 
@@ -126,17 +126,17 @@
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label x:Name="Name" Content="Name:" Grid.Row="0" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="descriptionTextBox23" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
+                <TextBox x:Name="nameTextBox" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label x:Name="Surname" Content="Surname:" Grid.Row="1" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="descriptionTextBox13" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
+                <TextBox x:Name="surnameTextBox" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label x:Name="Phone" Content="Phone:" Grid.Row="2" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="descriptionTextBox213" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
+                <TextBox x:Name="phoneTextBox" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Defect Description:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0">
-            <TextBox x:Name="descriptionTextBox21093" Grid.Column="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
+            <TextBox x:Name="descriptionTextBox" Grid.Column="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding DefectDescription}"/>
         </GroupBox>
-        <Button x:Name="chooseServiceButton245" Content="Add service" VerticalAlignment="Stretch"  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}" Margin="10, 0, 10, 0"/>
+        <Button x:Name="addServiceButton" Content="Add service" VerticalAlignment="Stretch"  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding AddService}" Margin="10, 0, 10, 0"/>
     </Grid>
 </Window>
 

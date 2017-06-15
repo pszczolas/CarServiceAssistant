@@ -18,8 +18,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
             <RowDefinition Height="180*"/>
-            <RowDefinition Height="280*"/>
-            <RowDefinition Height="40*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="120*"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
@@ -77,10 +77,10 @@
                 <Label x:Name="Model" Content="Car Model:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Height="30"></Label>
                 <Label x:Name="Phone" Content="Owner Phone:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Height="30"></Label>
                 <Label x:Name="Status" Content="ServiceStatus:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Height="30"></Label>
-                <Label x:Name="ActualBrand" Content="Brand:" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
-                <Label x:Name="ActualModel" Content="Model:" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
-                <Label x:Name="ActualPhone" Content="Phone:" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
-                <Label x:Name="ActualStatus" Content="Status:" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
+                <Label x:Name="ActualBrand" Content="{Binding Service.Car.Brand}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
+                <Label x:Name="ActualModel" Content="{Binding Service.Car.Model}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
+                <Label x:Name="ActualPhone" Content="{Binding Service.Customer.PhoneNumber}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
+                <Label x:Name="ActualStatus" Content="{Binding ServiceStatusName}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Height="30"></Label>
             </Grid>
         </GroupBox>
 
@@ -96,10 +96,10 @@
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Label x:Name="partNameLabel" Content="Part Name:" Grid.Row="0" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="partNameTextBox" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
+                <TextBox x:Name="partNameTextBox" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" Text="{Binding PartName, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label x:Name="priceLabel" Content="Price:" Grid.Row="1" VerticalAlignment="Center" Height="30"></Label>
-                <TextBox x:Name="priceTextBox" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
-                <Button x:Name="usePartButton" Content="Use" VerticalAlignment="Center" Height="22" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
+                <TextBox x:Name="priceTextBox" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" Height="22" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding PartPrice, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button x:Name="usePartButton" Content="Use" VerticalAlignment="Center" Height="22" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding AddPart}"/>
             </Grid>
         </GroupBox>
 
@@ -109,20 +109,35 @@
                     <RowDefinition Height="3*"></RowDefinition>
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBox x:Name="descriptionTextBox21093" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}"/>
-                <Button x:Name="chooseServiceButton245" VerticalAlignment="Center" Height="22" Content="Save" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
+                <TextBox x:Name="descriptionTextBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" Text="{Binding DefectDescription, Mode=TwoWay}"/>
+                <Button x:Name="saveDescriptionButton" VerticalAlignment="Center" Height="22" Content="Save" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding UpdateDescription}"/>
             </Grid>
         </GroupBox>
 
-        <GroupBox Header="Used Parts:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="3" Margin="10,0,10,0">
-            <DataGrid x:Name="serviceInfoDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" ItemsSource="{Binding services, Mode=TwoWay}" SelectedItem="{Binding SelectedService}" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended" SelectionUnit="FullRow">
+        <GroupBox Header="Used Parts:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Margin="10,0,10,0">
+            <DataGrid x:Name="serviceInfoDataGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" ItemsSource="{Binding Parts, Mode=TwoWay}" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended" SelectionUnit="FullRow">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Car.Vin}" Header="Part Name" Width="*"/>
-                    <DataGridTextColumn Binding="{Binding ServiceStatus.Name}" Header="Price" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Part Name" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Price}" Header="Price" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>
-        <Button x:Name="chooseServiceButton2045" Content="Close service" VerticalAlignment="Stretch"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}" Margin="10, 0, 10, 0"/>
 
+        <GroupBox Header="Close Service:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Margin="10,0,10,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="paidCheckBox" Content="Paid by customer" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" IsChecked="{Binding Paid}"></CheckBox>
+                <Label Content="Total price:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="totalPriceTextBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="1" Margin="0" TextWrapping="Wrap" Height="22" Text="{Binding TotalPrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                <Button x:Name="closeServiceButton" Content="Close service" VerticalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Command="{Binding CompleteService}"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>

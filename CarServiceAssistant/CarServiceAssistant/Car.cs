@@ -7,21 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarServiceAssistant.Model
+namespace CarServiceAssistant
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ServiceStatus
+    public partial class Car
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ServiceStatus()
+        public Car()
         {
             this.Service = new HashSet<Service>();
         }
     
         public long Id { get; set; }
-        public string Name { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public string Vin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Service> Service { get; set; }

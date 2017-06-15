@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarServiceAssistant.Model
+namespace CarServiceAssistant
 {
     using System;
     using System.Data.Entity;

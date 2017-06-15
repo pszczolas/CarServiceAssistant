@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AudiCarDealer.Manager.View
+namespace CarServiceAssistant.View
 {
     /// <summary>
     /// Interaction logic for ServiceSelection.xaml
@@ -21,6 +21,7 @@ namespace AudiCarDealer.Manager.View
     {
         public ServiceSelection()
         {
+            DataContext = new ViewModel.ServiceSelectionViewModel();
             InitializeComponent();
         }
     }
