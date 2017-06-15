@@ -43,6 +43,7 @@
           <Property Name="CarId" Type="integer" Nullable="false" />
           <Property Name="CustomerId" Type="integer" Nullable="false" />
           <Property Name="StatusId" Type="integer" Nullable="false" />
+          <Property Name="TotalPrice" Type="decimal" Precision="53" Scale="0" />
         </EntityType>
         <EntityType Name="ServiceStatus">
           <Key>
@@ -168,6 +169,7 @@
           <Property Name="CarId" Type="Int64" Nullable="false" />
           <Property Name="CustomerId" Type="Int64" Nullable="false" />
           <Property Name="StatusId" Type="Int64" Nullable="false" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="53" Scale="0" />
           <NavigationProperty Name="Car" Relationship="Self.FK_Service_2_0" FromRole="Service" ToRole="Car" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_Service_1_0" FromRole="Service" ToRole="Customer" />
           <NavigationProperty Name="Part" Relationship="Self.FK_Part_0_0" FromRole="Service" ToRole="Part" />
@@ -298,6 +300,7 @@
                 <ScalarProperty Name="CarId" ColumnName="CarId" />
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

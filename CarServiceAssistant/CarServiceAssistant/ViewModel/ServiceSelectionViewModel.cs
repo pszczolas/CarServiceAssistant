@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarServiceAssistant.Utils;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,8 +9,9 @@ using System.Windows.Input;
 
 namespace CarServiceAssistant.ViewModel
 {
-    class ServiceSelectionViewModel
+    class ServiceSelectionViewModel 
     {
+        WindowManager wm = new WindowManager();
         private ServiceStatus selectedStatus;
         private string searchedPhrase;
         public ServiceSelectionViewModel()
@@ -21,6 +23,7 @@ namespace CarServiceAssistant.ViewModel
             }
             SelectedStatus = ServiceStatuses.First();
             SearchedPhrase = "";
+            InitializeCommands();
         }
         public ICommand WorkWithService { get; private set; }
         public ObservableCollection<ServiceStatus> ServiceStatuses { get; set; }
@@ -46,7 +49,7 @@ namespace CarServiceAssistant.ViewModel
         }
         private void InitializeCommands()
         {
-
+            WorkWithService = new Command(x => SelectedService != null, x => wm.OpenModification((int)SelectedService.Id));
         }
         private void FilterServices()
         {

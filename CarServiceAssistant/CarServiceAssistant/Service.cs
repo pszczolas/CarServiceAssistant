@@ -27,6 +27,7 @@ namespace CarServiceAssistant
         public long CarId { get; set; }
         public long CustomerId { get; set; }
         public long StatusId { get; set; }
+        public Nullable<decimal> TotalPrice { get; set; }
     
         public virtual Car Car { get; set; }
         public virtual Customer Customer { get; set; }

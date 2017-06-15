@@ -38,7 +38,7 @@ namespace CarServiceAssistant.ViewModel
             }
         }
 
-        public ServiceModificationViewModel()
+        public ServiceModificationViewModel(int id)
         {
             using (var context = new CarServiceDBEntities())
             {
@@ -46,11 +46,11 @@ namespace CarServiceAssistant.ViewModel
                     .Include("Customer")
                     .Include("Car")
                     .Include("ServiceStatus")
-                    .First(); //HARCODED
+                    .First(x => x.Id == id);
                 serviceStatusName = Service.ServiceStatus.Name;
                 Parts = new ObservableCollection<Part>(context.Part.Where(x => x.ServiceId == Service.Id));
                 DefectDescription = Service.DefectDescription;
-                //TotalPrice = Service.
+                TotalPrice = Service.TotalPrice.ToString();
             }
             InitializeCommands();
         }
@@ -64,7 +64,7 @@ namespace CarServiceAssistant.ViewModel
         {
             AddPart = new Command(x => PartFormFilledCorrectly(), x => AddPartToService());
             UpdateDescription = new Command(x => true, x => UpdateServiceDescription());
-            CompleteService = new Command(x => TotalPriceIsInCorrectFormat(), x => ChangeServiceStatus("completed"));
+            CompleteService = new Command(x => TotalPriceIsInCorrectFormat(), x => CloseService());
         }
         private bool TotalPriceIsInCorrectFormat()
         {
@@ -109,6 +109,18 @@ namespace CarServiceAssistant.ViewModel
                 context.SaveChanges();
             }
             ServiceStatusName = status.Name;
+        }
+        private void CloseService()
+        {
+            using (var context = new CarServiceDBEntities())
+            {
+                context.Service.Find(Service.Id).TotalPrice = decimal.Parse(TotalPrice);
+                context.SaveChanges();
+            }
+            if (Paid)
+                ChangeServiceStatus("paid");
+            else
+                ChangeServiceStatus("completed");
         }
     }
 }

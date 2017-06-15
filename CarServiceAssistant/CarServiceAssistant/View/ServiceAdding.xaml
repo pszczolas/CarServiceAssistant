@@ -17,68 +17,25 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="120*"/>
-            <RowDefinition Height="180*"/>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="150*"/>
             <RowDefinition Height="160*"/>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
-        <Grid Background="#FFF0F0F0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="4">
+        <Grid Background="#FFF0F0F0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"></RowDefinition>
+                <RowDefinition Height="24"></RowDefinition>
+                <RowDefinition Height="24"></RowDefinition>
+            </Grid.RowDefinitions>
             <Label Background="Gray" Content="Menu" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Padding="1"></Label>
-            <Menu x:Name="menu" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,21.5,0,0">
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Header="New" HorizontalContentAlignment="Center">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction 
-                                Command="{Binding NavigationMenuItemClicked}"
-                                CommandParameter="DemandViewerWindow"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </MenuItem>
-                <MenuItem Header="Select" HorizontalContentAlignment="Center">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction 
-                                Command="{Binding NavigationMenuItemClicked}"
-                                CommandParameter="DemandManagerWindow"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </MenuItem>
-                <MenuItem Header="Sum?" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction 
-                                Command="{Binding NavigationMenuItemClicked}"
-                                CommandParameter="DemandProviderWindow"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </MenuItem>
-            </Menu>
+            <Button x:Name="addService" Content="Add Service" VerticalAlignment="Top" Height="22" Grid.Row="1" Click="addService_Click"/>
+            <Button x:Name="selectService" Content="Select Service" VerticalAlignment="Top" Height="22" Grid.Row="2" Click="selectService_Click"/>
         </Grid>
 
-        <GroupBox Header="Find Car:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1" Margin="10, 0, 10, 0">
-            <Grid Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"></RowDefinition>
-                    <RowDefinition Height="1*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Label x:Name="a" Content="Vin:"/>
-                <TextBox x:Name="searchedVinTextBox" Text="{Binding SearchedVin, Mode=TwoWay}" VerticalAlignment="Center" Height="22"  Grid.Column="1"/>
-                <Button x:Name="findByVinButton" Content="Find by VIN" VerticalAlignment="Center" Height="22"  Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
-            </Grid>
-        </GroupBox>
-
-        <GroupBox Header="Car Information:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="1" Margin="10, 0, 10, 0">
+        <GroupBox Header="Car Information:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0">
             <Grid Grid.Row="2" HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -98,23 +55,9 @@
             </Grid>
         </GroupBox>
 
-        <GroupBox Header="Find Customer:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="2" Margin="10, 0, 10, 0">
-            <Grid Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"></RowDefinition>
-                    <RowDefinition Height="1*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Label x:Name="b" Content="Phone:"/>
-                <TextBox x:Name="searchedPhoneTextBox" Text="{Binding SearchedPhoneNumber, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="22"  Grid.Column="1"/>
-                <Button x:Name="findByPhoneButton" Content="Find by phone number" VerticalAlignment="Center" Height="22"  Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding WorkWithService}"/>
-            </Grid>
-        </GroupBox>
 
-        <GroupBox Header="Customer Information:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="2" Margin="10, 0, 10, 0">
+
+        <GroupBox Header="Customer Information:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10, 0, 10, 0">
             <Grid Grid.Row="2" HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"></ColumnDefinition>

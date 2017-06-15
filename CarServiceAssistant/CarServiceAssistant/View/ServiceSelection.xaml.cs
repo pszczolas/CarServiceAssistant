@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarServiceAssistant.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,29 @@ namespace CarServiceAssistant.View
     /// </summary>
     public partial class ServiceSelection : Window
     {
+        WindowManager wm = new WindowManager();
         public ServiceSelection()
         {
             DataContext = new ViewModel.ServiceSelectionViewModel();
             InitializeComponent();
+        }
+        private void addService_Click(object sender, RoutedEventArgs e)
+        {
+            wm.OpenAdding();
+            this.Visibility = Visibility.Hidden;
+            this.Close();
+        }
+
+        private void selectService_Click(object sender, RoutedEventArgs e)
+        {
+            wm.OpenSelection();
+            this.Visibility = Visibility.Hidden;
+            this.Close();
+        }
+
+        private void chooseServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

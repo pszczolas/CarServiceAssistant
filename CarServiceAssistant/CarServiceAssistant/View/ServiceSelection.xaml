@@ -24,43 +24,16 @@
         </Grid.RowDefinitions>
 
         <Grid Background="#FFF0F0F0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"></RowDefinition>
+                <RowDefinition Height="24"></RowDefinition>
+                <RowDefinition Height="24"></RowDefinition>
+            </Grid.RowDefinitions>
             <Label Background="Gray" Content="Menu" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Padding="1"></Label>
-            <Menu x:Name="menu" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,21.5,0,0">
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Header="New" HorizontalContentAlignment="Center">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction 
-                                Command="{Binding NavigationMenuItemClicked}"
-                                CommandParameter="DemandViewerWindow"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </MenuItem>
-                <MenuItem Header="Select" HorizontalContentAlignment="Center">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction 
-                                Command="{Binding NavigationMenuItemClicked}"
-                                CommandParameter="DemandManagerWindow"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </MenuItem>
-                <MenuItem Header="Sum?" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Click">
-                            <i:InvokeCommandAction 
-                                Command="{Binding NavigationMenuItemClicked}"
-                                CommandParameter="DemandProviderWindow"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </MenuItem>
-            </Menu>
+            <Button x:Name="addService" Content="Add Service" VerticalAlignment="Top" Height="22" Grid.Row="1" Click="addService_Click"/>
+            <Button x:Name="selectService" Content="Select Service" VerticalAlignment="Top" Height="22" Grid.Row="2" Click="selectService_Click"/>
         </Grid>
-        
+
         <GroupBox Header="Filters:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10, 0, 10, 0">
             <Grid Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
@@ -75,8 +48,7 @@
                 <ComboBox x:Name="statusComboBox" VerticalAlignment="Center" Grid.Column="0" ItemsSource="{Binding ServiceStatuses}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedStatus}" Margin="0,2,0,0">
 
                 </ComboBox>
-                <TextBox x:Name="findPhraseTextBox" Text="{Binding SearchedPhrase, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="22"  Grid.Column="4"/>
-                <Button x:Name="chooseServiceButton" Content="Work with this service" VerticalAlignment="Center" Height="22"  Grid.Column="6" Command="{Binding WorkWithService}"/>
+                <Button x:Name="chooseServiceButton" Content="Work with this service" VerticalAlignment="Bottom" Height="22"  Grid.Column="6" Command="{Binding WorkWithService}" Margin="0,0,0,7" Click="chooseServiceButton_Click"/>
             </Grid>
         </GroupBox>
 
@@ -91,7 +63,6 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Car.Brand}" Header="Brand" Width="*"/>
                         <DataGridTextColumn Binding="{Binding Car.Model}" Header="Model" Width="*"/>
-                        <DataGridTextColumn Binding="{Binding ServiceStatus.Name}" Header="Status" Width="*"/>
                         <DataGridTextColumn Binding="{Binding StartDate}" Header="Date" Width="*"/>
                         <DataGridTextColumn Binding="{Binding Customer.Name}" Header="Surname" Width="*"/>
                     </DataGrid.Columns>

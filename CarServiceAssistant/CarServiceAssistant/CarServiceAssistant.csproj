@@ -89,39 +89,41 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Car.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarServiceAssistantModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceAssistantModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarServiceAssistantModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarServiceAssistantModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceAssistantModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Part.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ServiceStatus.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils\Command.cs" />
+    <Compile Include="Utils\WindowManager.cs" />
     <Compile Include="ViewModel\ServiceAddingViewModel.cs" />
     <Compile Include="ViewModel\ServiceModificationViewModel.cs" />
     <Compile Include="ViewModel\ServiceSelectionViewModel.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="View\ServiceAdding.xaml.cs">
       <DependentUpon>ServiceAdding.xaml</DependentUpon>
     </Compile>
@@ -174,12 +176,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model.edmx">
+    <EntityDeploy Include="CarServiceAssistantModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarServiceAssistantModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
+    <None Include="CarServiceAssistantModel.edmx.diagram">
+      <DependentUpon>CarServiceAssistantModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,19 +196,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="CarServiceAssistantModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarServiceAssistantModel.edmx</DependentUpon>
+      <LastGenOutput>CarServiceAssistantModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CarServiceAssistantModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarServiceAssistantModel.edmx</DependentUpon>
+      <LastGenOutput>CarServiceAssistantModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets')" />
