@@ -18,6 +18,9 @@ namespace CarServiceAssistant
         public CarServiceDBEntities()
             : base("name=CarServiceDBEntities")
         {
+            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string path = (System.IO.Path.GetDirectoryName(executable));
+            AppDomain.CurrentDomain.SetData("DataDirectory", path);
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
