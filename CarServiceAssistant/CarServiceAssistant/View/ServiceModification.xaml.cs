@@ -23,6 +23,7 @@ namespace CarServiceAssistant.View
         WindowManager wm = new WindowManager();
         public ServiceModification()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
         private void addService_Click(object sender, RoutedEventArgs e)

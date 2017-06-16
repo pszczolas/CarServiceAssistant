@@ -23,6 +23,7 @@ namespace CarServiceAssistant.View
         WindowManager wm = new WindowManager();
         public ServiceAdding()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             DataContext = new ViewModel.ServiceAddingViewModel();
             InitializeComponent();
         }

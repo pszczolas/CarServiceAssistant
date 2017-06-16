@@ -29,6 +29,7 @@ namespace CarServiceAssistant.ViewModel
         public ICommand UpdateDescription { get; set; }
         public ICommand CompleteService { get; set; }
         private bool? paid;
+        IMessenger messanger = new Messenger();
         public bool Paid
         {
             get { return paid ?? false; }
@@ -89,6 +90,7 @@ namespace CarServiceAssistant.ViewModel
             }
             Parts.Add(part);
             ChangeServiceStatus("in progress");
+            messanger.ShowOK();
         }
         private void UpdateServiceDescription()
         {
@@ -98,6 +100,7 @@ namespace CarServiceAssistant.ViewModel
                 context.SaveChanges();
             }
             ChangeServiceStatus("in progress");
+            messanger.ShowOK();
         }
         private void ChangeServiceStatus(string statusName)
         {
@@ -121,6 +124,7 @@ namespace CarServiceAssistant.ViewModel
                 ChangeServiceStatus("paid");
             else
                 ChangeServiceStatus("completed");
+            messanger.ShowOK();
         }
     }
 }

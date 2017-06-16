@@ -25,6 +25,8 @@ namespace CarServiceAssistant.ViewModel
         public ICommand FindCustomerByPhone { get; set; }
         public ICommand AddService { get; set; }
 
+        IMessenger messanger = new Messenger();
+
         public ServiceAddingViewModel()
         {
             InitializeCommands();
@@ -56,6 +58,7 @@ namespace CarServiceAssistant.ViewModel
                 context.Service.Add(newService);
                 context.SaveChanges();
             }
+            messanger.ShowOK();
         }
         private bool FormIsFilled()
         {

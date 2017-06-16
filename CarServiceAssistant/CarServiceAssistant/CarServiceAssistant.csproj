@@ -119,6 +119,8 @@
       <DependentUpon>CarServiceAssistantModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils\Command.cs" />
+    <Compile Include="Utils\IMessenger.cs" />
+    <Compile Include="Utils\Messenger.cs" />
     <Compile Include="Utils\WindowManager.cs" />
     <Compile Include="ViewModel\ServiceAddingViewModel.cs" />
     <Compile Include="ViewModel\ServiceModificationViewModel.cs" />
