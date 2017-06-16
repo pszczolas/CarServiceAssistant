@@ -64,7 +64,7 @@
                         <DataGridTextColumn Binding="{Binding Car.Brand}" Header="Brand" Width="*"/>
                         <DataGridTextColumn Binding="{Binding Car.Model}" Header="Model" Width="*"/>
                         <DataGridTextColumn Binding="{Binding StartDate}" Header="Date" Width="*"/>
-                        <DataGridTextColumn Binding="{Binding Customer.Name}" Header="Surname" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding Customer.Surname}" Header="Surname" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <TextBox x:Name="descriptionTextBox" Grid.Column="2" HorizontalAlignment="Stretch" Margin="0" TextWrapping="Wrap" VerticalAlignment="Stretch" Text="{Binding SelectedItem.DefectDescription, ElementName=serviceInfoDataGrid}" IsReadOnly="True"/>
